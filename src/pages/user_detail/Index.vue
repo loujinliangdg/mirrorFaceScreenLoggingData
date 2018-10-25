@@ -49,7 +49,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="weightStatusText" id="" v-model="healthData.weightStatusText">
+                            <select name="weightStatusText" id="" v-model="healthData.weightStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -70,7 +70,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="fatPercentageStatusText" id="" v-model="healthData.fatPercentageStatusText">
+                            <select name="fatPercentageStatusText" id="" v-model="healthData.fatPercentageStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="较高">较高</option>
@@ -108,7 +108,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="visceralFatPercentageStatusText" id="" v-model="healthData.visceralFatPercentageStatusText">
+                            <select name="visceralFatPercentageStatusText" id="" v-model="healthData.visceralFatPercentageStatusText" @change="selectChange">
                                 <option value="正常">正常</option>
                                 <option value="超标">超标</option>
                                 <option value="高">高</option>
@@ -129,7 +129,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="proteinStatusText" id="" v-model="healthData.proteinStatusText">
+                            <select name="proteinStatusText" id="" v-model="healthData.proteinStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -150,7 +150,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="waterStatusText" id="" v-model="healthData.waterStatusText">
+                            <select name="waterStatusText" id="" v-model="healthData.waterStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -171,7 +171,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="muscleStatusText" id="" v-model="healthData.muscleStatusText">
+                            <select name="muscleStatusText" id="" v-model="healthData.muscleStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -192,7 +192,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="boneMuscleStatusText" id="" v-model="healthData.boneMuscleStatusText">
+                            <select name="boneMuscleStatusText" id="" v-model="healthData.boneMuscleStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -213,7 +213,7 @@
                     <div class="flex1 flex align-items-center">
                         <div class="label">等级：</div>
                         <div class="flex1">
-                            <select name="boneStatusText" id="" v-model="healthData.boneStatusText">
+                            <select name="boneStatusText" id="" v-model="healthData.boneStatusText" @change="selectChange">
                                 <option value="低">低</option>
                                 <option value="正常">正常</option>
                                 <option value="高">高</option>
@@ -398,6 +398,7 @@
     .page{
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        background: #fff;
     }
     .row{
         width: 100%;
